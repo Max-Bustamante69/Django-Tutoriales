@@ -10,6 +10,7 @@
                 class="card-img-top img-card">
             <div class="card-body text-center">
                 <a href="{% url 'show' id=product.id %}" class="btn bg-primary text-white">{{product.name}}</a>
+                <p>{{ product.price }}</p> <!-- Display the price -->
             </div>
         </div>
     </div>
