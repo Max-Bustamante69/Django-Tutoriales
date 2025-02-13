@@ -1,0 +1,44 @@
+#template gitignore for django project
+# See https://www.gitignore.io/api/django
+
+
+# Django specific
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media
+
+# If your build process includes running collectstatic, you probably don't need or want to include staticfiles
+# in your Git repository. Update and uncomment the following line accordingly.
+# staticfiles/
+
+# If your build process includes running collectstatic, you probably don't need or want to include staticfiles
+# in your Git repository. Update and uncomment the following line accordingly.
+# static/
+
+# Django migrations
+*/migrations/*
+
+# PyCharm specific
+.idea/
+
+# VS Code specific
+.vscode/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+
