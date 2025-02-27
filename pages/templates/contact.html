@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1>{{ subtitle }}</h1>
+    <hr>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Contact Information</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="fa fa-envelope"></i> Email: <a href="mailto:{{ email }}">{{ email }}</a>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-map-marker"></i> Address: {{ address }}
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-phone"></i> Phone: {{ phone }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

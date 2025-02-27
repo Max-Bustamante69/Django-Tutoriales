@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Product Created {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Success</div>
+                <div class="card-body">
+                    <div class="alert alert-success">
+                        <p>Product created successfully!</p>
+                    </div>
+                    <a href="{% url 'form' %}" class="btn btn-primary">Create another product</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
