@@ -3,6 +3,6 @@ from django.http import HttpRequest
 
 
 class ImageStorage(ABC):
-    @abstractmethod # any class that inherits from this one must implement this method
+    @abstractmethod
     def store(self, request: HttpRequest):
         pass

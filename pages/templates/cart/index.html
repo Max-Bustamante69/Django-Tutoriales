@@ -1,18 +1,19 @@
-{% extends 'pages/base.html' %}
+{% extends 'base.html' %}
 {% block title %} {{title}} {% endblock %}
 {% block header_title %} {{subtitle}} {% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <h1>Available products</h1>
             <ul>
-                {% for key, product in products.items %}
+                {% for product in products %}
                 <li>
-                    Id: {{ key }} -
+                    Id: {{ product.id }} -
                     Name: {{ product.name }} -
                     Price: {{ product.price }} -
-                    <form method="post" action="{% url 'cart_add' key %}">
+                    <form method="post" action="{% url 'cart_add' product.id %}">
                         {% csrf_token %}
                         <button type="submit">Add product to cart</button>
                     </form>
@@ -21,16 +22,17 @@
             </ul>
         </div>
     </div>
+
     <div class="row justify-content-center">
         <div class="col-md-12">
             <h1>Products in cart</h1>
             <ul>
-                {% for key, product in cart_products.items %}
+                {% for product in cart_products %}
 
                 <li>
-                    Id: {{ key }} -
+                    Id: {{ product.id }} -
                     Name: {{ product.name }} -
-                    Price: {{ product.price }}
+                    Price: {{ product.price }} -
                 </li>
                 {% endfor %}
             </ul>

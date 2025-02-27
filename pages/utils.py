@@ -10,5 +10,3 @@ class ImageLocalStorage(ImageStorage):
             # Store the image
             file_name = default_storage.save('uploaded_images/' + profile_image.name, profile_image)
             return default_storage.url(file_name)
-
-
